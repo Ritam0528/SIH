@@ -1,0 +1,172 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Roadmap & Full Interactions — Proposed Solution (SIH)</title>
+  
+  <style>
+    body {font-family: Arial, sans-serif; background: #f9fafb; margin: 0; padding: 20px;}
+    h1 {text-align: center; font-size: 24px; color: #333; margin-bottom: 20px;}
+    .swimlanes {display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 30px;}
+    .lane {background: #e5e7eb; padding: 15px; border-radius: 8px; overflow-y: auto; max-height: 90vh;}
+    .lane h2 {text-align: center; font-size: 16px; margin-top: 0; color: #111827;}
+    .flowchart {display: flex; flex-direction: column; align-items: center; gap: 20px; margin-top: 20px;}
+    .node {background: #fff; border: 2px solid #2563eb; border-radius: 6px; padding: 10px 15px; text-align: center; width: 260px; position: relative;}
+    .node small {display: block; font-size: 12px; color: #555; margin-top: 5px;}
+    .arrow {width: 2px; height: 25px; background: #2563eb; margin: 0 auto;}
+    h2.roadmap-title {grid-column: span 4; text-align: center; margin-top: 40px; font-size: 20px; color: #2563eb;}
+    
+    /* Added responsive styles */
+    @media (max-width: 768px) {
+      .swimlanes {grid-template-columns: 1fr; gap: 15px; margin-top: 20px;}
+      .lane {padding: 12px; margin-bottom: 15px;}
+      .node {width: 90%; margin: 0 auto; padding: 8px 12px; font-size: 14px;}
+      .arrow {height: 20px; margin: 0 auto; transform: rotate(90deg);}
+      h1 {font-size: 20px; margin-bottom: 15px;}
+      h2.roadmap-title {font-size: 18px; margin-top: 30px; padding-bottom: 10px; border-bottom: 1px solid #d1d5db;}
+    }
+    
+    @media (max-width: 480px) {
+      body {padding: 15px;}
+      .node {width: 85%; margin: 0 auto; padding: 6px 10px; font-size: 13px; line-height: 1.4;}
+      .arrow {height: 18px; margin: 0 auto; transform: rotate(90deg);}
+      h1 {font-size: 18px; margin-bottom: 12px;}
+      h2.roadmap-title {font-size: 16px; margin-top: 25px; padding-bottom: 6px;}
+    }
+    
+    /* Image container for enlarged view */
+    .solution-diagram {
+      text-align: center;
+      margin: 20px 0;
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: block;
+      width: 100%;
+    }
+    
+    .solution-diagram img {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-width: 100%;
+      max-height: 80vh;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+  <h1>Roadmap & Full Interactions — Proposed Solution (SIH)</h1>
+
+  <!-- Added solution diagram with enlarged version -->
+  <div class="solution-diagram">
+    <img src="Benefits of the Solution - visual selection (2).png" alt="Enhancing Public Transit with Technology" style="width: 100%; height: auto; display: block;">
+  </div>
+
+  <h2 class="roadmap-title">Roadmap Overview</h2>
+  <div class="flowchart">
+    <div class="node">Phase 1: Requirement Gathering<small>Stakeholder analysis, problem definition</small></div>
+    <div class="arrow"></div>
+    <div class="node">Phase 2: Prototype Development<small>Driver app, commuter app, authority dashboard</small></div>
+    <div class="arrow"></div>
+    <div class="node">Phase 3: AI Integration<small>ETA, disruption alerts, demand forecasting, anti-bunching</small></div>
+    <div class="arrow"></div>
+    <div class="node">Phase 4: Testing & Pilots<small>Offline, poor network, low battery scenarios</small></div>
+    <div class="arrow"></div>
+    <div class="node">Phase 5: Deployment<small>Public rollout across modes</small></div>
+    <div class="arrow"></div>
+    <div class="node">Phase 6: Feedback & Iteration<small>Gamified feedback & AI improvements</small></div>
+    <div class="arrow"></div>
+    <div class="node">Phase 7: Scaling<small>Expand to intercity & multi-modal</small></div>
+  </div>
+
+  <h2 class="roadmap-title">Interactions by Role (All Features)</h2>
+  <div class="swimlanes">
+    <!-- Drivers -->
+    <div class="lane">
+      <h2>Drivers</h2>
+      <div class="flowchart">
+        <div class="node">AI-Enhanced Real-Time Tracking<small>IoT driver app streams location</small></div>
+        <div class="arrow"></div>
+        <div class="node">Route Updates<small>AI disruption alerts & rerouting</small></div>
+        <div class="arrow"></div>
+        <div class="node">AI Anti-Bunching Engine<small>Spacing control</small></div>
+        <div class="arrow"></div>
+        <div class="node">Emergency Auto-Rerouting<small>Accident/disaster handling</small></div>
+      </div>
+    </div>
+
+    <!-- Conductors -->
+    <div class="lane">
+      <h2>Conductors</h2>
+      <div class="flowchart">
+        <div class="node">Smart Digital Ticketing<small>QR/UPI payments, seat optimization</small></div>
+        <div class="arrow"></div>
+        <div class="node">CrowdSense AI<small>Occupancy from tickets & sensors</small></div>
+        <div class="arrow"></div>
+        <div class="node">Report Issues<small>Delays, breakdowns</small></div>
+        <div class="arrow"></div>
+        <div class="node">Assist Passengers<small>Accessibility & support</small></div>
+      </div>
+    </div>
+
+    <!-- Authorities -->
+    <div class="lane">
+      <h2>Authorities</h2>
+      <div class="flowchart">
+        <div class="node">Reliability Analytics Dashboard<small>Punctuality, delays</small></div>
+        <div class="arrow"></div>
+        <div class="node">AI-Powered ETA Predictions<small>Traffic, weather, IoT</small></div>
+        <div class="arrow"></div>
+        <div class="node">Demand Forecasting Intelligence<small>Festival & seasonal rush</small></div>
+        <div class="arrow"></div>
+        <div class="node">Digital Twin for Route Optimization<small>Passenger flow simulation</small></div>
+        <div class="arrow"></div>
+        <div class="node">Smart Route Deviation Detection<small>AI geofencing</small></div>
+        <div class="arrow"></div>
+        <div class="node">Ghost Bus Detector<small>Identify phantom buses</small></div>
+      </div>
+    </div>
+
+    <!-- Passengers -->
+    <div class="lane">
+      <h2>Passengers</h2>
+      <div class="flowchart">
+        <div class="node">Next-Gen Super-App<small>Live tracking, ticketing, intermodal</small></div>
+        <div class="arrow"></div>
+        <div class="node">Edge-Optimized Offline Mode<small>Cached routes, SMS/WhatsApp fallback</small></div>
+        <div class="arrow"></div>
+        <div class="node">Conversational AI Chatbots<small>ETAs, booking, planner</small></div>
+        <div class="arrow"></div>
+        <div class="node">Personalized Mobility Assistant<small>Daily nudges</small></div>
+        <div class="arrow"></div>
+        <div class="node">Inclusive Accessibility Suite<small>Voice-first, elder UI, haptics</small></div>
+        <div class="arrow"></div>
+        <div class="node">XR-Enabled Explorer<small>AR/VR bus maps</small></div>
+        <div class="arrow"></div>
+        <div class="node">GeoHeat AI Maps<small>Waiting-time visualization</small></div>
+        <div class="arrow"></div>
+        <div class="node">Silent-Haptic Alerts<small>Destination vibration alerts</small></div>
+        <div class="arrow"></div>
+        <div class="node">Cognitive Journey Planner<small>Cost/time optimization</small></div>
+        <div class="arrow"></div>
+        <div class="node">Smart Stop Digital Twin<small>Predictive arrivals</small></div>
+        <div class="arrow"></div>
+        <div class="node">On-Demand Virtual Stops<small>Pick/drop within 4 km</small></div>
+        <div class="arrow"></div>
+        <div class="node">Contextual Stop Naming<small>Landmark-based names</small></div>
+        <div class="arrow"></div>
+        <div class="node">Adaptive Elder-Friendly UX<small>Big fonts, voice</small></div>
+        <div class="arrow"></div>
+        <div class="node">Battery Saver Mode<small>Text-only when low power</small></div>
+        <div class="arrow"></div>
+        <div class="node">Gamified Feedback Loop<small>Rewards for input</small></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
